@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Abhishek Kumar - Resume</title>
+
+<style>
+    :root {
+        --primary: #1f4f7b;
+        --text-main: #222222;
+        --muted: #555555;
+        --border-light: #dddddd;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 32px 16px;
+        background: #f5f5f5;
+        color: var(--text-main);
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .container {
+        max-width: 820px;
+        margin: auto;
+        background: #ffffff;
+        padding: 28px 30px 30px;
+        box-shadow: 0 0 0.5rem rgba(0,0,0,0.06);
+        border-radius: 6px;
+    }
+
+    /* HEADER */
+    .header {
+        display: grid;
+        grid-template-columns: 2.3fr 1.7fr;
+        column-gap: 16px;
+        align-items: center;
+        border-bottom: 2px solid var(--primary);
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+        letter-spacing: 0.03em;
+        margin: 0 0 4px;
+        text-transform: uppercase;
+        color: var(--primary);
+    }
+
+    .subtitle {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 0;
+    }
+
+    .contact {
+        text-align: right;
+        font-size: 12px;
+        color: var(--muted);
+    }
+
+    .contact a {
+        color: var(--primary);
+        text-decoration: none;
+    }
+
+    .contact a:hover {
+        text-decoration: underline;
+    }
+
+    .contact-row {
+        margin-bottom: 2px;
+    }
+
+    /* SECTION TITLES */
+    .section-title {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        color: var(--primary);
+        margin-top: 14px;
+        margin-bottom: 6px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    /* SUMMARY */
+    .summary {
+        font-size: 12.5px;
+        color: var(--muted);
+        margin: 0 0 4px;
+    }
+
+    /* TABLES */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 6px;
+        table-layout: fixed;
+    }
+
+    th, td {
+        padding: 5px 6px;
+        vertical-align: top;
+        font-size: 12px;
+    }
+
+    th {
+        text-align: left;
+        width: 30%;
+        font-weight: 600;
+        color: var(--text-main);
+        background: #f6f7f9;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    td {
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    /* EXPERIENCE */
+    .job {
+        display: grid;
+        grid-template-columns: 2.3fr 1.7fr;
+        column-gap: 16px;
+        margin-top: 8px;
+    }
+
+    .job-role {
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .job-meta {
+        text-align: right;
+        font-size: 11.5px;
+        color: var(--muted);
+    }
+
+    .job-company {
+        font-weight: 500;
+    }
+
+    ul {
+        margin: 4px 0 0 18px;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 3px;
+        font-size: 12px;
+    }
+
+    /* CERTIFICATIONS */
+    .cert-list {
+        margin: 4px 0 0 16px;
+        padding: 0;
+    }
+
+    .cert-list > li {
+        margin-bottom: 4px;
+    }
+
+    .cert-title {
+        font-weight: 600;
+        font-size: 12.5px;
+    }
+
+    .cert-details {
+        margin-top: 2px;
+        margin-bottom: 4px;
+    }
+
+    .cert-details li {
+        list-style-type: disc;
+        margin-left: 16px;
+    }
+
+    /* DOWNLOAD BUTTON */
+    .toolbar {
+        text-align: right;
+        margin-bottom: 12px;
+    }
+
+    .download-btn {
+        padding: 5px 10px;
+        font-size: 11.5px;
+        cursor: pointer;
+        border-radius: 4px;
+        border: 1px solid var(--primary);
+        background: #ffffff;
+        color: var(--primary);
+    }
+
+    .download-btn:hover {
+        background: var(--primary);
+        color: #ffffff;
+    }
+
+    @media print {
+        body {
+            background: #ffffff;
+            padding: 0;
+        }
+        .container {
+            box-shadow: none;
+            border-radius: 0;
+            max-width: 100%;
+            padding: 20px 28px;
+        }
+        .toolbar {
+            display: none;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- DOWNLOAD BUTTON -->
+    <div class="toolbar">
+        <button class="download-btn" onclick="downloadPDF()">
+            Download as PDF
+        </button>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div>
+            <h1>Abhishek Kumar</h1>
+            <p class="subtitle">Power Platform Senior Consultant · Kolkata, India</p>
+        </div>
+        <div class="contact">
+            <div class="contact-row">
+                📧 <a href="mailto:guptabhi49@gmail.com">guptabhi49@gmail.com</a>
+            </div>
+            <div class="contact-row">
+                📞 <a href="tel:+917294131149">+91 72941 31149</a>
+            </div>
+            <div class="contact-row">
+                🔗 <a href="https://www.linkedin.com/in/abhishek-kumar-6493861b1" target="_blank">
+                    linkedin.com/in/abhishek-kumar-6493861b1
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SUMMARY -->
+    <div class="section-title">Professional Summary</div>
+    <p class="summary">
+        Power Platform Senior Consultant with 3+ years of experience designing and delivering enterprise-grade automation solutions using Power Apps, Power Automate, Dataverse, and REST integrations. 
+        Microsoft Certified Power Platform Solution Architect (PL-600).
+    </p>
+
+    <!-- MAJOR ELECTIVES / SKILLS -->
+    <div class="section-title">Core Skills & Technologies</div>
+    <table>
+        <tr>
+            <th>Microsoft Power Platform</th>
+            <td>Power Apps (Canvas, Model-Driven), Power Automate (Cloud & Desktop), Dataverse, Power Pages, AI Builder, Copilot</td>
+        </tr>
+        <tr>
+            <th>Data & Integration</th>
+            <td>SQL, Dataverse security model, Power BI (basic), SharePoint integration, REST APIs, JSON, XML</td>
+        </tr>
+        <tr>
+            <th>Development</th>
+            <td>Java, JavaScript, Object-oriented programming</td>
+        </tr>
+        <tr>
+            <th>Delivery & Methods</th>
+            <td>Agile, Scrum, SDLC, solution architecture, ALM, stakeholder communication</td>
+        </tr>
+    </table>
+
+    <!-- EXPERIENCE -->
+    <div class="section-title">Professional Experience</div>
+
+    <div class="job">
+        <div>
+            <div class="job-role">Data Solutions Professional</div>
+            <div class="job-company">BT Group</div>
+        </div>
+        <div class="job-meta">
+            Apr 2025 – Present · Kolkata, India
+        </div>
+    </div>
+    <ul>
+        <li>Architect and deliver Power Platform solutions using Power Apps, Power Automate, and Dataverse aligned to enterprise standards.</li>
+        <li>Design end-to-end solution architecture including environments, security roles, data models, and automation patterns.</li>
+        <li>Develop Canvas and Model-Driven apps tailored to business process requirements and UX best practices.</li>
+        <li>Implement Power Automate cloud and desktop flows for approvals, orchestration, and system integrations.</li>
+        <li>Integrate Power Platform solutions with external systems using REST APIs and JSON.</li>
+        <li>Mentor junior developers on Power Platform standards, governance, and best practices.</li>
+    </ul>
+
+    <div class="job">
+        <div>
+            <div class="job-role">Data Solutions Analyst</div>
+            <div class="job-company">BT Group</div>
+        </div>
+        <div class="job-meta">
+            Aug 2022 – Apr 2025
+        </div>
+    </div>
+    <ul>
+        <li>Delivered internal enterprise applications supporting 5,000+ users across multiple business units.</li>
+        <li>Automated manual business processes using Power Automate, reducing operational effort and cycle time.</li>
+        <li>Supported Dataverse-based solutions including data modeling, security configuration, and workflow automation.</li>
+        <li>Worked in Agile delivery teams across backlog refinement, sprint planning, estimation, and releases.</li>
+    </ul>
+
+    <div class="job">
+        <div>
+            <div class="job-role">Intern</div>
+            <div class="job-company">BT Group</div>
+        </div>
+        <div class="job-meta">
+            Mar 2022 – Jun 2022
+        </div>
+    </div>
+    <ul>
+        <li>Developed single-page applications using React, REST APIs, and SharePoint integration.</li>
+    </ul>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section-title">Professional Certifications</div>
+    <ul class="cert-list">
+        <li>
+            <span class="cert-title">PL-600: Microsoft Power Platform Solution Architect Expert</span>
+            <ul class="cert-details">
+                <li>Designing end-to-end Power Platform solutions including architecture, security, integration.</li>
+                
+            </ul>
+        </li>
+        <li>
+            <span class="cert-title">PL-900: Microsoft Power Platform Fundamentals</span>
+            <ul class="cert-details">
+                
+                <li>Creating Power Apps, automating workflows with Power Automate, Dataverse fundamentals, and Power Virtual Agents.</li>
+            </ul>
+        </li>
+    
+        <li>
+            <span class="cert-title">AZ-900: Microsoft Azure Fundamentals</span>
+            <ul class="cert-details">
+                <li>Core cloud concepts, Azure services, security, compliance, and pricing models.</li>
+            </ul>
+        </li>
+        
+    </ul>
+
+    <!-- EDUCATION -->
+    <div class="section-title">Education</div>
+    <table>
+        <tr>
+            <th>B.Tech – Computer Science</th>
+            <td>Future Institute of Technology · 2022</td>
+        </tr>
+    </table>
+
+</div>
+
+<script>
+    function downloadPDF() {
+        window.print();
+    }
+</script>
+</body>
+</html>
